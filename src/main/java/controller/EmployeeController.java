@@ -184,12 +184,12 @@ public class EmployeeController implements EmployeeControllerInterface {
         System.out.println("Enter Account");
         String account = scanner.nextLine();
         if (!employeeModel.checkExistAccount(account)){
-            System.out.println("Account is not Exist ");
+            System.out.println("Account is not Exist, Please check your info account and password again");
         } else {
             System.out.println("Enter Password");
             String password = scanner.nextLine();
             if (employeeModel.login(account,password)==null){
-                System.out.println("Login fail, Please check your info account and password");
+                System.out.println("Login fail, Please check your info account and password again");
             } else {
                 Employee employee = employeeModel.findByAccount(account);
                 System.out.println("Found");
