@@ -26,7 +26,7 @@ public class EmployeeController implements EmployeeControllerInterface {
             System.out.println("account <= 10, Please Enter Again");
             return false;
         } else if (employeeModel.checkExistAccount(account)){
-            System.out.println("This id existed, Please Enter Again");
+            System.out.println("This account existed, Please Enter Again");
             return false;
         }
         return true;
@@ -177,31 +177,6 @@ public class EmployeeController implements EmployeeControllerInterface {
             System.out.println("Action failse");
         }
     }
-
-//    @Override
-//    public void search() {
-//        System.out.println("Search Employee by Account");
-//        System.out.println("Enter Account");
-//        String account = scanner.nextLine();
-//        if (!employeeModel.checkExistAccount(account)){
-//            System.out.println("Not found");
-//        } else {
-//            Employee employee = employeeModel.findByAccount(account);
-//            System.out.println("Found");
-//            System.out.println("\n---------------------------------------------------------------------------------------------------------------------------------");
-//            System.out.printf("%5s%8s%5s | %1s%21s%14s | %5s%30s%15s | %8s%10s%7s | %5s%15s%5s | %5s%15s%5s | %5s%10s%5s | %5s%10s%5s\n",
-//                    "","Account", "",
-//                    "","Password", "",
-//                    "","Name", "",
-//                    "","Email", "",
-//                    "","Address", "",
-//                    "","Create At", "",
-//                    "","Update At", "",
-//                    "","Status", "");
-//            System.out.println(employee.toString());
-//            System.out.println("\n---------------------------------------------------------------------------------------------------------------------------------");
-//        }
-//    }
 
     @Override
     public void login() {
